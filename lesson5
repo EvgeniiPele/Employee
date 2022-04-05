@@ -1,0 +1,37 @@
+public class Employee {
+    public String fullname;
+    public String position;
+    public String email;
+    public String telephone;
+    public int salary;
+    public int age;
+
+    public Employee(String fullname, String position, String email, String telephone, int salary, int age) {
+        this.fullname = fullname;
+        this.position = position;
+        this.email = email;
+        this.telephone = telephone;
+        this.salary = salary;
+        this.age = age;
+    }
+    public String foo (String[] args) {
+        return (fullname+ "; "
+                +position+ "; "
+                +email+ "; "
+                +telephone+ "; "
+                +salary+ "; "
+                +age);
+    }
+    public int getAge() {
+        return age;
+    }
+    public static void main(String[] args) {
+        Employee[] employee = new Employee[5];
+        employee[0] = new Employee("Иванов Иван Иванович", "Менеджер", "ivanovii@gmail.com","89601514523",30000,30);
+        employee[1] = new Employee("Петров Петр Петрович", "Грузчик", "petrovpp@gmail.com","89302586523",40000,41);
+        employee[2] = new Employee("Сидорова Галина Николаевна", "Бухгалтер", "sidorrovagn@gmail.com","89502586396",50000,45);
+        employee[3] = new Employee("Судочук Григорий Иванович", "Директор", "sidorchuk@gmail.com","89105457896",60000,58);
+        employee[4] = new Employee("Молодцов Сергей Андреевич", "Системный администратор", "molodcovsa@gmail.com","89203658547",50000,22);
+        for (int i=0; i < employee.length; i++)
+            if (employee[i].age > 40)
+                System.out.println(employee);
